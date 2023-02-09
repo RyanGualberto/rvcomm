@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+.auth-page-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  .navbar {
+    width: 100%;
+    background-color: darkslateblue;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+
+    .logo {
+      font-size: 24px;
+    }
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      height: fit-content;
+      min-width: 400px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border: 2px solid #33333340;
+      border-radius: 8px;
+
+      input {
+        padding: 12px 6px;
+        font-size: 16px;
+        border-radius: 8px;
+        outline: none;
+        border: 1px solid #33333340;
+        background-color: #fff;
+        transition: 0.2s all ease-in-out;
+      }
+
+      input:hover {
+        background-color: #33333310;
+      }
+
+      button {
+        padding: 12px;
+        font-size: 16px;
+        background-color: darkslateblue;
+        border-radius: 8px;
+        border: none;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .extra-links {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+
+        .recovery-password-link {
+          text-decoration: none;
+          color: #333;
+        }
+
+        .secondary-link {
+          font-weight: 600;
+          text-decoration: none;
+          color: darkslateblue;
+        }
+      }
+    }
+  }
+}

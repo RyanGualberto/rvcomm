@@ -1,0 +1,47 @@
+.product-card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  width: 275px;
+  height: 360px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card-image {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .product-card-brand {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #33333380;
+  }
+
+  .product-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333333;
+  }
+
+  .product-card-last-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ff000080;
+    text-decoration: line-through;
+  }
+
+  .product-card-current-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: darkslateblue;
+  }
+}
