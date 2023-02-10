@@ -1,11 +1,16 @@
 import "./index.scss";
-import { CarouselContainer, ProductCard } from "../../../components";
+import {
+  CarouselContainer,
+  ProductCard,
+  BigBanner,
+  BannerTitle,
+} from "../../../components";
 import { products } from "../../../mock/products";
-import { BannerTitle } from "../../../components/Banner";
 
 const Home = () => {
   return (
     <div className="home-container">
+      <BigBanner label="Seja Bem Vindo" />
       <div className="home-section">
         <BannerTitle title="Menores Preços" />
         <CarouselContainer per_page={5} item_width={275}>

@@ -14,7 +14,10 @@ const CarouselContainer = ({
   item_width,
 }: ICarouselProps) => {
   const [current_page, set_current_page] = useState(0);
-  const total_pages = Math.ceil(children.length / per_page);
+  const is_mobile = window.innerWidth < 768;
+  const total_pages = is_mobile
+    ? children.length
+    : Math.ceil(children.length / per_page);
 
   function handlePageChange(page: any) {
     if (page === -1) {
@@ -39,8 +42,12 @@ const CarouselContainer = ({
       <div
         className="carousel-container-content"
         style={{
-          transform: `translateX(-${current_page * per_page * 275}px)`,
-          width: `${children.length * item_width}px`,
+          transform: is_mobile
+            ? `translateX(-${current_page * item_width}px)`
+            : `translateX(-${current_page * item_width * per_page}px)`,
+          width: is_mobile
+            ? `${children.length * item_width}px`
+            : `${children.length * item_width}px`,
         }}
       >
         {children}
