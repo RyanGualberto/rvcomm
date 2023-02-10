@@ -1,4 +1,5 @@
 export interface IProductCard {
+    id: number;
     title: string;
     description: string;
     current_price: number;

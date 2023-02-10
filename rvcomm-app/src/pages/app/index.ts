@@ -1,2 +1,3 @@
 export * from "./home"
-export * from "./products"
+export * from "./catalogo"
+export * from "./produto"

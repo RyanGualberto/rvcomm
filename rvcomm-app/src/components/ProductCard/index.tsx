@@ -1,8 +1,10 @@
 import "./index.scss";
 import { IProductCard } from "../../interfaces/products/IProductCard";
 import { priceFormat } from "../../helpers/formats";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({
+  id,
   current_price,
   title,
   url_image,
@@ -10,7 +12,7 @@ const ProductCard = ({
   brand,
 }: IProductCard) => {
   return (
-    <div className="product-card-container">
+    <Link to={`/app/produto/${id}`} className="product-card-container">
       <img className="product-card-image" src={url_image} />
       <div className="product-card-brand">{brand}</div>
       <div className="product-card-title">{title}</div>
@@ -20,7 +22,7 @@ const ProductCard = ({
       <div className="product-card-current-price">
         {priceFormat(current_price)}
       </div>
-    </div>
+    </Link>
   );
 };
 

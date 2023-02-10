@@ -17,6 +17,7 @@ const Home = () => {
           {products.map((product, index) => (
             <ProductCard
               key={index}
+              id={product.id}
               available_quantity={product.available_quantity}
               current_price={product.current_price}
               description={product.description}
@@ -34,6 +35,7 @@ const Home = () => {
         <CarouselContainer per_page={5} item_width={275}>
           {products.map((product, index) => (
             <ProductCard
+              id={product.id}
               key={index}
               available_quantity={product.available_quantity}
               current_price={product.current_price}

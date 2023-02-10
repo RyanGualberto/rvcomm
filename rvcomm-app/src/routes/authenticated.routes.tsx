@@ -19,7 +19,8 @@ const AuthenticatedRoutes = () => {
       <Navbar />
       <Routes>
         <Route path="/home" element={<AuthPages.Home />} />
-        <Route path="/products/*" element={<AuthPages.Products />} />
+        <Route path="/catalogo/*" element={<AuthPages.Catalogo />} />
+        <Route path="/produto/:id" element={<AuthPages.Produto />} />
       </Routes>
       <Footer />
     </div>
