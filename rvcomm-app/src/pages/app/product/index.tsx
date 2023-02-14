@@ -6,7 +6,7 @@ import { AiFillStar, AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { priceFormat } from "../../../helpers/formats";
 import { Link } from "react-router-dom";
 
-const Produto = () => {
+const Product = () => {
   const [product, setProduct] = useState({
     id: 1,
     available_quantity: 2,
@@ -151,4 +151,4 @@ const Produto = () => {
   );
 };
 
-export { Produto };
+export { Product };

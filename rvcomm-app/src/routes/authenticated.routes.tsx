@@ -19,8 +19,9 @@ const AuthenticatedRoutes = () => {
       <Navbar />
       <Routes>
         <Route path="/home" element={<AuthPages.Home />} />
-        <Route path="/catalogo/*" element={<AuthPages.Catalogo />} />
-        <Route path="/produto/:id" element={<AuthPages.Produto />} />
+        <Route path="/catalogo/*" element={<AuthPages.Catalog />} />
+        <Route path="/produto/:id" element={<AuthPages.Product />} />
+        <Route path="/carrinho" element={<AuthPages.Cart />} />
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,103 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .cart-title {
+    margin: 20px 0;
+  }
+
+  .cart-table-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+
+    .cart-table-header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .cart-table-header-row {
+        width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1px;
+        
+        .cart-table-header-cell {
+          display: flex;
+          justify-content: flex-start;
+          padding: 10px 20px;
+          font-weight: 300;
+          background-color: darkslateblue;
+          color: whitesmoke;
+
+          &:first-child {
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    .cart-table-body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .cart-table-body-row {
+        width: 100%;
+        display: flex;
+        gap: 2px;
+
+        .cart-table-body-cell {
+          display: flex;
+          justify-content: flex-start;
+          padding: 10px 20px;
+          font-size: 16px;
+
+          &:first-child {
+            flex: 1;
+            display: flex;
+
+            img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+
+          &.quantity {
+            display: flex;
+            flex-direction: column;
+
+            .action-button-quantity {
+                width: 30px;
+                height: 30px;   
+                background-color: rgb(57, 217, 109);
+                color: white;
+                border: none;
+            }
+
+            .input-quantity-container {
+              .input-quantity {
+                width: 30px;
+                height: 30px;
+                padding: 0 10px;
+                border: none;
+                border-top: 0.5px solid #33333350;
+                border-bottom: 0.5px solid #33333350;
+              }
+
+              .input-quantity::-webkit-outer-spin-button,
+              .input-quantity::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+              }
+
+              .input-quantity[type="number"] {
+                -moz-appearance: textfield;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

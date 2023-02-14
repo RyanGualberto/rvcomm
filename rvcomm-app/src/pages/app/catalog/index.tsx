@@ -2,7 +2,7 @@ import "./index.scss";
 import { ProductCard } from "../../../components";
 import { products } from "../../../mock/products";
 
-const Catalogo = () => {
+const Catalog = () => {
   return (
     <div className="products-page-container">
       <div className="products-catalog-container">
@@ -25,4 +25,4 @@ const Catalogo = () => {
   );
 };
 
-export { Catalogo };
+export { Catalog };

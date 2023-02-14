@@ -1,3 +1,4 @@
 export * from "./home"
-export * from "./catalogo"
-export * from "./produto"
+export * from "./catalog"
+export * from "./product"
+export * from "./cart"
