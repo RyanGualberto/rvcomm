@@ -1,3 +1,5 @@
+import { BsTrash } from "react-icons/bs";
+
 const CartItem = () => {
   return (
     <div className="cart-table-body-row">
@@ -15,10 +17,13 @@ const CartItem = () => {
           <input type="number" className="input-quantity" />
           <button className="action-button-quantity">+</button>
         </div>
-        <p>Excluir Produto</p>
+        <div className="action-trash-container">
+          <BsTrash />
+          <p>Excluir Produto</p>
+        </div>
       </div>
-      <div className="cart-table-body-cell">R$89,99</div>
-      <div className="cart-table-body-cell">R$89999,90</div>
+      <div className="cart-table-body-cell price">R$89,99</div>
+      <div className="cart-table-body-cell price">R$89999,90</div>
     </div>
   );
 };

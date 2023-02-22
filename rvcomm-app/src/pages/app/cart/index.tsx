@@ -17,25 +17,29 @@ const Cart = () => {
         </thead>
         <tbody className="cart-table-body">
           <CartItem />
+          <CartItem />
+          <CartItem />
         </tbody>
+        <tfoot className="cart-table-footer">
+          <tr className="cart-table-footer-row">
+            <td className="cart-table-footer-cell cep-container">
+              <div className="input-cep-container">
+                  <input className="input-cep" type="number" />
+                  <button className="button-cep">OK</button>
+              </div>
+              <a className="link-cep" href="#">Não sei meu CEP</a>
+            </td>
+            <td className="cart-table-footer-cell price-total-container">
+              <p>
+                Subtotal (1 item) <span className="price subtotal"> R$8.999,99</span>
+              </p>
+              <p>
+                Valor Total: <span className="price total"> R$9.999,99</span>
+              </p>
+            </td>
+          </tr>
+        </tfoot>
       </table>
-      <div>
-        <div>
-          <div>
-            <input type="number" />
-            <button>OK</button>
-          </div>
-          <a href="#">Não sei meu CEP</a>
-        </div>
-        <div>
-          <p>
-            Subtotal (1 item) <span> R$8.999,99</span>
-          </p>
-          <p>
-            Valor Total: <span> R$9.999,99</span>
-          </p>
-        </div>
-      </div>
       <div>
         <button>Finalizar Compra</button>
       </div>

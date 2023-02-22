@@ -5,12 +5,10 @@
   text-align: center;
   margin-bottom: 1rem;
 
-  // cria um efeito de gradiente
   background: linear-gradient(90deg, darkslateblue, #fcfcfc, darkslateblue);
   background-size: 200%;
   animation: gradient 3s ease infinite;
 
-  // cria um efeito de gradiente
   @keyframes gradient {
     0% {
       background-position: 0%;

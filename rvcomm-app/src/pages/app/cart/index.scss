@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   .cart-title {
     margin: 20px 0;
   }
@@ -16,12 +17,12 @@
       display: flex;
       flex-direction: column;
 
-      .cart-table-header-row {
+      .cart-table-body-row, .cart-table-header-row {
         width: 100%;
         width: 100%;
-        display: flex;
-        flex-direction: row;
+        display: grid;
         gap: 1px;
+        grid-template-columns: 2fr 0.35fr 0.35fr 0.35fr 0.35fr;
         
         .cart-table-header-cell {
           display: flex;
@@ -45,18 +46,23 @@
 
       .cart-table-body-row {
         width: 100%;
-        display: flex;
-        gap: 2px;
+        display: grid;
+        gap: 1px;
+        grid-template-columns: 2fr 0.35fr 0.35fr 0.35fr 0.35fr;
+        border: 0.5px solid #33333350;
+        border-top: none;
+        align-items: center;
 
         .cart-table-body-cell {
+          width: 100%;
           display: flex;
-          justify-content: flex-start;
-          padding: 10px 20px;
+          justify-content: center;
+          padding: 10px 0;
           font-size: 16px;
 
           &:first-child {
-            flex: 1;
             display: flex;
+            justify-content: flex-start;
 
             img {
               width: 80px;
@@ -67,16 +73,28 @@
           &.quantity {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2px;
 
-            .action-button-quantity {
+            .input-quantity-container {
+              display: flex;
+              justify-content: center;
+
+              .action-button-quantity {
                 width: 30px;
                 height: 30px;   
                 background-color: rgb(57, 217, 109);
                 color: white;
                 border: none;
+                cursor: pointer;
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                  background-color: rgb(30, 137, 66);
+                }
             }
 
-            .input-quantity-container {
               .input-quantity {
                 width: 30px;
                 height: 30px;
@@ -93,6 +111,112 @@
 
               .input-quantity[type="number"] {
                 -moz-appearance: textfield;
+              }
+            }
+
+            .action-trash-container {
+              display: flex;
+              white-space: nowrap;
+              gap: 2px;
+              font-size: 14px;
+              align-items: center;
+              text-decoration: underline;
+              color: #333333;
+              cursor: pointer;
+              transition: all 0.2s ease-in-out;
+
+                &:hover {
+                  color: #33333390;
+                }
+            }
+          }
+
+          &.price {
+            color: darkslateblue;
+          }
+        }
+      }
+    }
+
+    .cart-table-footer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .cart-table-footer-row{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        border: 0.5px solid #33333350;
+        border-top: none;
+
+        .cart-table-footer-cell{
+          padding: 10px 20px;
+
+          &.cep-container {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+
+            .input-cep-container {
+              width: 100%;
+              height: 48px;
+              display: flex;
+              gap: 2px;
+
+              .input-cep {
+                width: 80%;
+                height: 100%;
+                padding: 10px;
+                outline: none;
+              }
+
+              .input-cep::-webkit-outer-spin-button,
+              .input-cep::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+              }
+
+              .input-cep[type="number"] {
+                -moz-appearance: textfield;
+              }
+
+              .button-cep {
+                width: 20%;
+                height: 100%;
+                border-radius: 0;
+                font-weight: 500;
+                text-transform: uppercase;
+                background-color: rgb(57, 217, 109);
+                color: #ffffff;
+                letter-spacing: 4px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                  background-color: rgb(30, 137, 66);
+                }
+              }
+            }
+
+            .link-cep{
+              font-size: 12px;
+              color: #333333;
+              white-space: nowrap;
+            }
+          }
+
+          &.price-total-container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+
+            .price {
+              color: darkslateblue;
+
+              &.total{
+                font-size: 32px;
               }
             }
           }
